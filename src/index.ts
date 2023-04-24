@@ -1,9 +1,26 @@
+// ========== 9 Objects ==========
+// How to do it if you haven't declared the types already
+// let employee:Employee = {
+//     readonly id: number,
+//     name: string,
+//     retire:(date:Date) => void} 
+let employee = {    //declared type in AdvancedTypes.ts
+    id: 1, 
+    name: '',
+    retire: (date:Date) => {
+        console.log(date);
+    }
+};
+
+
+
 // ========== 8 Functions ==========
-function calculateTax(income: number, taxYear: number): number{
+function calculateTax(income: number, taxYear = 2022): number{
     if(taxYear < 2023)
         return income * 1.2;
     return income * 1.3;
 }
+calculateTax(50_000); 
 
 // ========== 7 Enums ==========
 const enum Size {Small = 1, Medium, Large};
