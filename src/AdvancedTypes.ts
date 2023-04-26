@@ -4,6 +4,7 @@ type Employee = {
     name: string,
     retire:(date:Date) => void
 }
+
 let employee2: Employee = { 
     id: 1, 
     name: '',
@@ -23,9 +24,9 @@ function kgToLbs(weight: number | string): number{
     }
 }
 
-kgToLbs(10);
-kgToLbs('10kg');
-
+const weight1: number = kgToLbs(10);
+const weight2: number = kgToLbs('10kg');
+console.log(weight1, weight2); 
 // ============ 4 Intersection Types ============
 // ============ 5 Literal Types ============
 // ============ 6 Nullable Types ============
