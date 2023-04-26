@@ -14,6 +14,7 @@ function kgToLbs(weight) {
         return parseInt(weight) * 2.2;
     }
 }
-kgToLbs(10);
-kgToLbs('10kg');
+const weight1 = kgToLbs(10);
+const weight2 = kgToLbs('10kg');
+console.log(weight1, weight2);
 //# sourceMappingURL=AdvancedTypes.js.map
