@@ -1,1 +1,1 @@
-{"version":3,"file":"ClassesIFacesOOP.js","sourceRoot":"","sources":["../src/ClassesIFacesOOP.ts"],"names":[],"mappings":""}
+{"version":3,"file":"ClassesIFacesOOP.js","sourceRoot":"","sources":["../src/ClassesIFacesOOP.ts"],"names":[],"mappings":";AA4BA,MAAM,OAAO;IAKT,YAAY,EAAU,EAAE,KAAa,EAAE,OAAe;QAClD,IAAI,CAAC,EAAE,GAAG,EAAE,CAAC;QACb,IAAI,CAAC,KAAK,GAAG,KAAK,CAAC;QACnB,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;IAC3B,CAAC;IAED,OAAO,CAAC,MAAc;QAClB,IAAG,MAAM,IAAI,CAAC,EAAC;YACX,MAAM,IAAI,KAAK,CAAC,uCAAuC,CAAC,CAAC;SAC5D;QACD,IAAI,CAAC,OAAO,IAAI,MAAM,CAAC;IAC3B,CAAC;CACJ"}
