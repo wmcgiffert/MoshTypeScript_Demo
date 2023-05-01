@@ -82,9 +82,41 @@ let log: any = null;
 log?.('a');
 
 // ============ 8 The Nullish Coaelscing Operator ============
-
+let speed: number | null = null;
+let ride = {
+    speed: speed ?? 30
+}
 
 
 // ============ 9 Type Assertions ============
+// let phone = document.getElementById('phone') as HTMLInputElement;
+let phone = <HTMLInputElement> document.getElementById('phone');
+phone.value = '123-456-7890';
+
 // ============ 10 Unkown Type ============
+// function gMoneyrender(document: unknown){
+//     // if(typeof document === 'string'){
+//     //     document.toUpperCase();
+//     // }
+//     if(document instanceof CustomDefinedType){
+//         document.toUpperCase();
+//     }
+//     document.move();
+//     document.fly();
+//     document.whatever();
+// }
+
 // ============ 11 Never Type ============
+function reject(message: string): never{
+    throw new Error(message);
+}
+
+function processEvents(): never{
+    while(true){
+        // Read a message from a queue
+    }
+}
+
+// processEvents();
+reject('Error');
+// console.log('Hello World');
