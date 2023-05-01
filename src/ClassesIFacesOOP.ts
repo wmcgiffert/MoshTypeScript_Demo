@@ -27,14 +27,16 @@
 
 // ============ 3 Creating Classes ============
 class Account {
-    id: number;
+    readonly id: number;
     owner: string;
     balance: number;
+    nickname?: string;
 
-    constructor(id: number, owner: string, balance: number){
+    constructor(id: number, owner: string, balance: number, nickname?: string){
         this.id = id;
         this.owner = owner;
         this.balance = balance;
+        this.nickname = nickname;
     }
 
     deposit(amount: number): void{
@@ -46,9 +48,21 @@ class Account {
 }
 
 // ============ 4 Creating Objects ============
+let account = new Account(1, 'William', 0, 'Garrett');
+console.log('Before deposit');
+console.table(account);
+account.deposit(10000);
+console.log('After deposit');
+console.table(account);
+console.log(typeof account);
+console.log(account instanceof Account);
+
 
 
 // ============ 5 Read-Only & Optional Properties ============
+// See ReadOnly designation in class above in section 3
+
+
 // ============ 6 Access Control Keywords ============
 // ============ 7 Parameter Properties ============
 // ============ 8 Getters & Setters ============
