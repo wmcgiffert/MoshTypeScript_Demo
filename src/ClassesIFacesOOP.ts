@@ -64,6 +64,53 @@ console.log(account instanceof Account);
 
 
 // ============ 6 Access Control Keywords ============
+class Account2 {
+    readonly id: number;
+    owner: string;
+    private _balance: number;
+    nickname?: string;
+
+    constructor(id: number, owner: string, balance: number, nickname?: string){
+        this.id = id;
+        this.owner = owner;
+        this._balance = balance;
+        this.nickname = nickname;
+    }
+
+    readBalance(): number{
+        //does have permission to access private balance?
+        return this._balance;
+    }
+    creditBalance(amount: number): string{
+        if(amount <= 0){
+            throw new Error('Withdrawal amount must be greater than 0');
+        }
+        this._balance -= amount;
+        return `Balance is now ${this._balance}`;
+    }
+
+    debtBalance(amount: number): string{
+        if(amount <= 0){
+            throw new Error('Deposit amount must be greater than 0');
+        }
+        this._balance += amount;
+        return `Balance is now ${this._balance}`;
+    }
+}
+
+let account2 = new Account2(1, 'William', 0, 'Garrett');
+// account2.balance = -1; Balance is private and cannot be accessed outside of the class
+
+// own experiment not part of tutorial
+console.log(`Balance is ${account2.readBalance()}`);
+console.log('After depositing 10000');
+account2.debtBalance(10000);
+console.log(`Balance is ${account2.readBalance()}`);
+console.log('After crediting 10000');
+account2.creditBalance(10000);
+console.log(`Balance is ${account2.readBalance()}`);
+
+
 // ============ 7 Parameter Properties ============
 // ============ 8 Getters & Setters ============
 // ============ 9 Index Signatues ============
