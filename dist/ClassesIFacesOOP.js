@@ -25,25 +25,25 @@ class Account2 {
     constructor(id, owner, balance, nickname) {
         this.id = id;
         this.owner = owner;
-        this.balance = balance;
+        this._balance = balance;
         this.nickname = nickname;
     }
     readBalance() {
-        return this.balance;
+        return this._balance;
     }
     creditBalance(amount) {
         if (amount <= 0) {
             throw new Error('Withdrawal amount must be greater than 0');
         }
-        this.balance -= amount;
-        return `Balance is now ${this.balance}`;
+        this._balance -= amount;
+        return `Balance is now ${this._balance}`;
     }
     debtBalance(amount) {
         if (amount <= 0) {
             throw new Error('Deposit amount must be greater than 0');
         }
-        this.balance += amount;
-        return `Balance is now ${this.balance}`;
+        this._balance += amount;
+        return `Balance is now ${this._balance}`;
     }
 }
 let account2 = new Account2(1, 'William', 0, 'Garrett');
@@ -54,4 +54,30 @@ console.log(`Balance is ${account2.readBalance()}`);
 console.log('After crediting 10000');
 account2.creditBalance(10000);
 console.log(`Balance is ${account2.readBalance()}`);
+class Account3 {
+    constructor(id, owner, balance, nickname) {
+        this.id = id;
+        this.owner = owner;
+        this.balance = balance;
+        this.nickname = nickname;
+    }
+    ;
+    readBalance() {
+        return this.balance;
+    }
+}
+class Account4 {
+    constructor(id, owner, _balance, nickname) {
+        this.id = id;
+        this.owner = owner;
+        this._balance = _balance;
+        this.nickname = nickname;
+    }
+    ;
+    get balance() {
+        return this._balance;
+    }
+}
+let account3 = new Account4(1, 'William', 0, 'Garrett');
+console.log(`Balance using getter ${account3.balance}`);
 //# sourceMappingURL=ClassesIFacesOOP.js.map

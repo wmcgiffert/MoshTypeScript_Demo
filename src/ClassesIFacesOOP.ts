@@ -26,7 +26,7 @@
 */
 
 // ============ 3 Creating Classes ============
-class Account {
+class Account{
     readonly id: number;
     owner: string;
     balance: number;
@@ -64,7 +64,7 @@ console.log(account instanceof Account);
 
 
 // ============ 6 Access Control Keywords ============
-class Account2 {
+class Account2{
     readonly id: number;
     owner: string;
     private _balance: number;
@@ -112,7 +112,33 @@ console.log(`Balance is ${account2.readBalance()}`);
 
 
 // ============ 7 Parameter Properties ============
+// Alternative way to initialze an instance of an object
+class Account3{
+    // readonly id: number;
+    // owner: string;
+    // private _balance: number;
+    // nickname?: string;
+
+    constructor(public readonly id: number, public owner: string, private balance: number, public nickname?: string){};
+
+    readBalance(): number{
+        return this.balance;
+    }
+}
+
 // ============ 8 Getters & Setters ============
+class Account4{
+    constructor(public readonly id: number, public owner: string, private _balance: number, public nickname?: string){};
+
+    get balance(): number{
+        return this._balance;
+    }
+}
+let account3 = new Account4(1, 'William', 0, 'Garrett');
+console.log(`Balance using getter ${account3.balance}`);
+
+
+
 // ============ 9 Index Signatues ============
 // ============ 10 Static Memembers ============
 // ============ 11 Inheritance ============
