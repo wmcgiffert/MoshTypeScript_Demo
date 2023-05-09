@@ -80,4 +80,24 @@ class Account4 {
 }
 let account3 = new Account4(1, 'William', 0, 'Garrett');
 console.log(`Balance using getter ${account3.balance}`);
+class SeatAssignment {
+}
+let seats = new SeatAssignment();
+seats.A1 = 'William';
+seats.A2 = 'Garrett';
+seats.A3 = 'Chris';
+seats['A4'] = 'Jake';
+seats['A5'] = 'John';
+seats['A6'] = 'Doug';
+class Ride {
+    start() { Ride.activeRides++; }
+    stop() { Ride.activeRides--; }
+}
+Ride.activeRides = 0;
+let ride1 = new Ride();
+let ride2 = new Ride();
+ride1.start();
+ride2.start();
+console.log(Ride.activeRides);
+console.log('Stop');
 //# sourceMappingURL=ClassesIFacesOOP.js.map

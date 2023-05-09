@@ -129,7 +129,6 @@ class Account3{
 // ============ 8 Getters & Setters ============
 class Account4{
     constructor(public readonly id: number, public owner: string, private _balance: number, public nickname?: string){};
-
     get balance(): number{
         return this._balance;
     }
@@ -138,9 +137,40 @@ let account3 = new Account4(1, 'William', 0, 'Garrett');
 console.log(`Balance using getter ${account3.balance}`);
 
 
-
 // ============ 9 Index Signatues ============
+class SeatAssignment{
+    [seatNumber: string]: string;
+}
+
+let seats = new SeatAssignment();
+seats.A1 = 'William';
+seats.A2 = 'Garrett';
+seats.A3 = 'Chris';
+seats['A4'] = 'Jake';
+seats['A5'] = 'John';
+seats['A6'] = 'Doug';
+
+
 // ============ 10 Static Memembers ============
+
+class Ride {
+    private static _activeRides: number = 0;
+    start(){Ride._activeRides++; }
+    stop(){Ride._activeRides--; }
+    static get activeRides(): number{
+        return Ride._activeRides;
+    }
+}
+
+let ride1 = new Ride();
+let ride2 = new Ride();
+ride1.start();
+ride2.start();
+console.log(Ride.activeRides);
+console.log('Stop');
+
+
+
 // ============ 11 Inheritance ============
 // ============ 12 Method Overriding ============
 // ============ 13 Polymorphism ============
