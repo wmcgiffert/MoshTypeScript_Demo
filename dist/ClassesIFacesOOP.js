@@ -90,14 +90,46 @@ seats['A4'] = 'Jake';
 seats['A5'] = 'John';
 seats['A6'] = 'Doug';
 class Ride {
-    start() { Ride.activeRides++; }
-    stop() { Ride.activeRides--; }
+    start() { Ride._activeRides++; }
+    stop() { Ride._activeRides--; }
+    static get activeRides() {
+        return Ride._activeRides;
+    }
 }
-Ride.activeRides = 0;
+Ride._activeRides = 0;
 let ride1 = new Ride();
 let ride2 = new Ride();
 ride1.start();
 ride2.start();
 console.log(Ride.activeRides);
-console.log('Stop');
+console.log('End of section 10');
+class Person {
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+    walk() {
+        console.log('Walking');
+    }
+}
+class Student extends Person {
+    constructor(firstName, lastName, age, studentId) {
+        super(firstName, lastName, age);
+        this.studentId = studentId;
+    }
+    walk() {
+        console.log('Walking to class');
+    }
+    talk() {
+        console.log('Talking about grades');
+    }
+}
+let student = new Student('William', 'McGiffert', 30, 11186935);
+student.talk();
+console.log(student);
+console.log('End of section 11');
 //# sourceMappingURL=ClassesIFacesOOP.js.map

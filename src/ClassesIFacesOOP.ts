@@ -171,7 +171,32 @@ console.log('End of section 10');
 
 
 // ============ 11 Inheritance ============
+class Person {
+    constructor(public firstName: string, public lastName: string, public age: number){}
+    get fullName(): string{
+        return `${this.firstName} ${this.lastName}`;
+    }
+    walk(){
+        console.log('Walking');
+    } 
+}
 
+class Student extends Person{
+    constructor(firstName: string, lastName: string, age: number, public studentId: number){
+        super(firstName, lastName, age);
+    }
+    walk(){
+        console.log('Walking to class');
+    }
+    talk(){
+        console.log('Talking about grades');
+    }
+}
+
+let student = new Student('William', 'McGiffert', 30, 1118935);
+student.talk();
+console.log(student);
+console.log('End of section 11');
 
 // ============ 12 Method Overriding ============
 // ============ 13 Polymorphism ============
