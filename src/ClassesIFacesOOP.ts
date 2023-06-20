@@ -167,7 +167,7 @@ let ride2 = new Ride();
 ride1.start();
 ride2.start();
 console.log(Ride.activeRides);
-console.log('Stop');
+console.log('End of section 10');
 
 
 // ============ 11 Inheritance ============
