@@ -193,6 +193,16 @@ class Student extends Person{
     }
 }
 
+class Teacher extends Person{
+    override get fullName(): string {
+        return `Professor ${super.fullName}`;
+    }
+}
+
+let teacher = new Teacher('William', 'McGiffert', 30);
+console.log(teacher.fullName);
+console.log(teacher);
+
 let student = new Student('William', 'McGiffert', 30, 1118935);
 student.talk();
 console.log(student);
