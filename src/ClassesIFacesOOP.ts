@@ -212,8 +212,17 @@ console.log(teacher.fullName);
 console.log('End of section 12');
 
 // ============ 13 Polymorphism ============
-
-
+console.log('');
+function printNames(people:Person[]){
+    for (let person of people) {
+        console.log(person.fullName);        
+    }
+}
+printNames([
+    new Student('Garrett', 'McGiffert', 30, 11186925), 
+    new Teacher('Jay', 'Glynn', 45)
+]);
+console.log('End of section 13');
 // ============ 14 Private vs Protected Members ============
 // ============ 15 Abstract Classes & Methods ============
 // ============ 16 Interfaces ===========

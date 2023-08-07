@@ -142,4 +142,15 @@ let teacher = new Teacher('William', 'McGiffert', 30);
 console.table(teacher);
 console.log(teacher.fullName);
 console.log('End of section 12');
+console.log('');
+function printNames(people) {
+    for (let person of people) {
+        console.log(person.fullName);
+    }
+}
+printNames([
+    new Student('Garrett', 'McGiffert', 30, 11186925),
+    new Teacher('Jay', 'Glynn', 45)
+]);
+console.log('End of section 13');
 //# sourceMappingURL=ClassesIFacesOOP.js.map
