@@ -128,16 +128,17 @@ class Student extends Person {
         console.log('Talking about grades');
     }
 }
+let student = new Student('William', 'McGiffert', 30, 1118935);
+student.talk();
+console.log(student);
+console.log('End of section 11');
 class Teacher extends Person {
     get fullName() {
         return `Professor ${super.fullName}`;
     }
 }
 let teacher = new Teacher('William', 'McGiffert', 30);
+console.table(teacher);
 console.log(teacher.fullName);
-console.log(teacher);
-let student = new Student('William', 'McGiffert', 30, 1118935);
-student.talk();
-console.log(student);
-console.log('End of section 11');
+console.log('End of section 12');
 //# sourceMappingURL=ClassesIFacesOOP.js.map

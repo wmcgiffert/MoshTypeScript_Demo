@@ -193,6 +193,12 @@ class Student extends Person{
     }
 }
 
+let student = new Student('William', 'McGiffert', 30, 1118935);
+student.talk();
+console.log(student);
+console.log('End of section 11');
+
+// ============ 12 Method Overriding ============
 class Teacher extends Person{
     override get fullName(): string {
         return `Professor ${super.fullName}`;
@@ -200,16 +206,13 @@ class Teacher extends Person{
 }
 
 let teacher = new Teacher('William', 'McGiffert', 30);
+console.table(teacher);
 console.log(teacher.fullName);
-console.log(teacher);
+console.log('End of section 12');
 
-let student = new Student('William', 'McGiffert', 30, 1118935);
-student.talk();
-console.log(student);
-console.log('End of section 11');
-
-// ============ 12 Method Overriding ============
 // ============ 13 Polymorphism ============
+
+
 // ============ 14 Private vs Protected Members ============
 // ============ 15 Abstract Classes & Methods ============
 // ============ 16 Interfaces ===========
