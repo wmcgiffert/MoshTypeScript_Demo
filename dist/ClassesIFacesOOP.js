@@ -129,6 +129,7 @@ class Student extends Person {
     }
 }
 let student = new Student('William', 'McGiffert', 30, 1118935);
+student.walk();
 student.talk();
 console.log(student);
 console.log('End of section 11');

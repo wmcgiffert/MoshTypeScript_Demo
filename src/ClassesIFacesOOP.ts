@@ -185,7 +185,7 @@ class Student extends Person{
     constructor(firstName: string, lastName: string, age: number, public studentId: number){
         super(firstName, lastName, age);
     }
-    walk(){
+    override walk(){
         console.log('Walking to class');
     }
     talk(){
@@ -194,6 +194,7 @@ class Student extends Person{
 }
 
 let student = new Student('William', 'McGiffert', 30, 1118935);
+student.walk();
 student.talk();
 console.log(student);
 console.log('End of section 11');
