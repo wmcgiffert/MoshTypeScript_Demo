@@ -26,21 +26,21 @@
 */
 
 // ============ 3 Creating Classes ============
-class Account{
+class Account {
     readonly id: number;
     owner: string;
     balance: number;
     nickname?: string;
 
-    constructor(id: number, owner: string, balance: number, nickname?: string){
+    constructor(id: number, owner: string, balance: number, nickname?: string) {
         this.id = id;
         this.owner = owner;
         this.balance = balance;
         this.nickname = nickname;
     }
 
-    deposit(amount: number): void{
-        if(amount <= 0){
+    deposit(amount: number): void {
+        if (amount <= 0) {
             throw new Error('Deposit amount must be greater than 0');
         }
         this.balance += amount;
@@ -64,33 +64,33 @@ console.log(account instanceof Account);
 
 
 // ============ 6 Access Control Keywords ============
-class Account2{
+class Account2 {
     readonly id: number;
     owner: string;
     private _balance: number;
     nickname?: string;
 
-    constructor(id: number, owner: string, balance: number, nickname?: string){
+    constructor(id: number, owner: string, balance: number, nickname?: string) {
         this.id = id;
         this.owner = owner;
         this._balance = balance;
         this.nickname = nickname;
     }
 
-    readBalance(): number{
+    readBalance(): number {
         //does have permission to access private balance?
         return this._balance;
     }
-    creditBalance(amount: number): string{
-        if(amount <= 0){
+    creditBalance(amount: number): string {
+        if (amount <= 0) {
             throw new Error('Withdrawal amount must be greater than 0');
         }
         this._balance -= amount;
         return `Balance is now ${this._balance}`;
     }
 
-    debtBalance(amount: number): string{
-        if(amount <= 0){
+    debtBalance(amount: number): string {
+        if (amount <= 0) {
             throw new Error('Deposit amount must be greater than 0');
         }
         this._balance += amount;
@@ -113,23 +113,23 @@ console.log(`Balance is ${account2.readBalance()}`);
 
 // ============ 7 Parameter Properties ============
 // Alternative way to initialze an instance of an object
-class Account3{
+class Account3 {
     // readonly id: number;
     // owner: string;
     // private _balance: number;
     // nickname?: string;
 
-    constructor(public readonly id: number, public owner: string, private balance: number, public nickname?: string){};
+    constructor(public readonly id: number, public owner: string, private balance: number, public nickname?: string) { };
 
-    readBalance(): number{
+    readBalance(): number {
         return this.balance;
     }
 }
 
 // ============ 8 Getters & Setters ============
-class Account4{
-    constructor(public readonly id: number, public owner: string, private _balance: number, public nickname?: string){};
-    get balance(): number{
+class Account4 {
+    constructor(public readonly id: number, public owner: string, private _balance: number, public nickname?: string) { };
+    get balance(): number {
         return this._balance;
     }
 }
@@ -138,7 +138,7 @@ console.log(`Balance using getter ${account3.balance}`);
 
 
 // ============ 9 Index Signatues ============
-class SeatAssignment{
+class SeatAssignment {
     [seatNumber: string]: string;
 }
 
@@ -155,9 +155,9 @@ seats['A6'] = 'Doug';
 
 class Ride {
     private static _activeRides: number = 0;
-    start(){Ride._activeRides++; }
-    stop(){Ride._activeRides--; }
-    static get activeRides(): number{
+    start() { Ride._activeRides++; }
+    stop() { Ride._activeRides--; }
+    static get activeRides(): number {
         return Ride._activeRides;
     }
 }
@@ -172,23 +172,23 @@ console.log('End of section 10');
 
 // ============ 11 Inheritance ============
 class Person {
-    constructor(public firstName: string, public lastName: string, public age: number){}
-    get fullName(): string{
+    constructor(public firstName: string, public lastName: string, public age: number) { }
+    get fullName(): string {
         return `${this.firstName} ${this.lastName}`;
     }
-    walk(){
+    walk() {
         console.log('Walking');
-    } 
+    }
 }
 
-class Student extends Person{
-    constructor(firstName: string, lastName: string, age: number, public studentId: number){
+class Student extends Person {
+    constructor(firstName: string, lastName: string, age: number, public studentId: number) {
         super(firstName, lastName, age);
     }
-    override walk(){
+    override walk() {
         console.log('Walking to class');
     }
-    talk(){
+    talk() {
         console.log('Talking about grades');
     }
 }
@@ -200,7 +200,7 @@ console.log(student);
 console.log('End of section 11');
 
 // ============ 12 Method Overriding ============
-class Teacher extends Person{
+class Teacher extends Person {
     override get fullName(): string {
         return `Professor ${super.fullName}`;
     }
@@ -213,24 +213,24 @@ console.log('End of section 12');
 
 // ============ 13 Polymorphism ============
 console.log('');
-class Principal extends Person{
-    override get fullName(){
+class Principal extends Person {
+    override get fullName() {
         return 'Principal ' + super.fullName;
     }
 }
 
-function printNames(people:Person[]){
+function printNames(people: Person[]) {
     for (let person of people) {
-        console.log(person.fullName);        
+        console.log(person.fullName);
     }
 }
 printNames([
-    new Student('Garrett', 'McGiffert', 30, 11186925), 
+    new Student('Garrett', 'McGiffert', 30, 11186925),
     new Teacher('Jay', 'Glynn', 45),
     new Principal('Henry', 'Poltran', 49)
 ]);
 console.log('End of section 13');
-
+console.log('End of section 13');
 
 // ============ 14 Private vs Protected Members ============
 // ============ 15 Abstract Classes & Methods ============
