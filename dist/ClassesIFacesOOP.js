@@ -143,6 +143,11 @@ console.table(teacher);
 console.log(teacher.fullName);
 console.log('End of section 12');
 console.log('');
+class Principal extends Person {
+    get fullName() {
+        return 'Principal ' + super.fullName;
+    }
+}
 function printNames(people) {
     for (let person of people) {
         console.log(person.fullName);
@@ -150,7 +155,8 @@ function printNames(people) {
 }
 printNames([
     new Student('Garrett', 'McGiffert', 30, 11186925),
-    new Teacher('Jay', 'Glynn', 45)
+    new Teacher('Jay', 'Glynn', 45),
+    new Principal('Henry', 'Poltran', 49)
 ]);
 console.log('End of section 13');
 //# sourceMappingURL=ClassesIFacesOOP.js.map

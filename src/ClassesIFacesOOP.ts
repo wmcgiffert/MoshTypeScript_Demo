@@ -213,6 +213,12 @@ console.log('End of section 12');
 
 // ============ 13 Polymorphism ============
 console.log('');
+class Principal extends Person{
+    override get fullName(){
+        return 'Principal ' + super.fullName;
+    }
+}
+
 function printNames(people:Person[]){
     for (let person of people) {
         console.log(person.fullName);        
@@ -220,9 +226,12 @@ function printNames(people:Person[]){
 }
 printNames([
     new Student('Garrett', 'McGiffert', 30, 11186925), 
-    new Teacher('Jay', 'Glynn', 45)
+    new Teacher('Jay', 'Glynn', 45),
+    new Principal('Henry', 'Poltran', 49)
 ]);
 console.log('End of section 13');
+
+
 // ============ 14 Private vs Protected Members ============
 // ============ 15 Abstract Classes & Methods ============
 // ============ 16 Interfaces ===========
