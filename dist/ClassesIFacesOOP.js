@@ -121,15 +121,15 @@ class Student extends Person {
         super(firstName, lastName, age);
         this.studentId = studentId;
     }
-    walk() {
-        console.log('Walking to class');
-    }
     talk() {
         console.log('Talking about grades');
     }
+    takeTest() {
+        this.walk();
+        console.log('Taking a test');
+    }
 }
 let student = new Student('William', 'McGiffert', 30, 1118935);
-student.walk();
 student.talk();
 console.log(student);
 console.log('End of section 11');
@@ -160,4 +160,11 @@ printNames([
     new Principal('Henry', 'Poltran', 49)
 ]);
 console.log('End of section 13');
+console.log('');
+console.log('Expected Results:');
+console.log('Walking');
+console.log('Taking a test');
+console.log('Actual Results:');
+student.takeTest();
+console.log('End of section 14');
 //# sourceMappingURL=ClassesIFacesOOP.js.map

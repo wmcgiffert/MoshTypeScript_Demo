@@ -176,7 +176,7 @@ class Person {
     get fullName(): string {
         return `${this.firstName} ${this.lastName}`;
     }
-    walk() {
+    protected walk() {
         console.log('Walking');
     }
 }
@@ -185,16 +185,21 @@ class Student extends Person {
     constructor(firstName: string, lastName: string, age: number, public studentId: number) {
         super(firstName, lastName, age);
     }
-    override walk() {
-        console.log('Walking to class');
-    }
+    // override walk() {
+    //     console.log('Walking to class');
+    // }
+
     talk() {
         console.log('Talking about grades');
+    }
+    takeTest() {
+        this.walk();
+        console.log('Taking a test');
     }
 }
 
 let student = new Student('William', 'McGiffert', 30, 1118935);
-student.walk();
+// student.walk();
 student.talk();
 console.log(student);
 console.log('End of section 11');
@@ -233,10 +238,16 @@ printNames([
 console.log('End of section 13');
 
 // ============ 14 Private vs Protected Members ============
+console.log('');
+console.log('Expected Results:');
+console.log('Walking');
+console.log('Taking a test');
 
-
-
-
+console.log('Actual Results:');
+student.takeTest();
+console.log('End of section 14');
 
 // ============ 15 Abstract Classes & Methods ============
+
+
 // ============ 16 Interfaces ===========
