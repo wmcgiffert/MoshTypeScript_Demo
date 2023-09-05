@@ -149,6 +149,7 @@ class Principal extends Person {
     }
 }
 function printNames(people) {
+    console.table(people);
     for (let person of people) {
         console.log(person.fullName);
     }
