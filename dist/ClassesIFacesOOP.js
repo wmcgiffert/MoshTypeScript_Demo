@@ -167,4 +167,23 @@ console.log('Taking a test');
 console.log('Actual Results:');
 student.takeTest();
 console.log('End of section 14');
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+    render() { }
+}
+class Circle extends Shape {
+    constructor(radius, color) {
+        super(color);
+        this.radius = radius;
+    }
+    render() {
+        console.log('Rendering a circle');
+    }
+}
+const circle = new Circle(1, "red");
+console.log('');
+circle.render();
+console.log('End of section 15');
 //# sourceMappingURL=ClassesIFacesOOP.js.map

@@ -248,10 +248,9 @@ student.takeTest();
 console.log('End of section 14');
 
 // ============ 15 Abstract Classes & Methods ============
-class Shape{
+abstract class Shape{
     constructor(public color: string){}
-    
-    render(){}
+    abstract render(): void;
 }
 
 class Circle extends Shape {
@@ -262,6 +261,13 @@ class Circle extends Shape {
         console.log('Rendering a circle'); 
     }
 }
+
+const circle = new Circle(1,"red");
+console.log('')
+
+circle.render();
+
+console.log('End of section 15');
 // ============ 16 Interfaces ===========
 
 
