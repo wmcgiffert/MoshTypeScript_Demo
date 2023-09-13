@@ -248,24 +248,26 @@ student.takeTest();
 console.log('End of section 14');
 
 // ============ 15 Abstract Classes & Methods ============
-abstract class Shape{
-    constructor(public color: string){}
+abstract class Shape {
+    constructor(public color: string) { }
     abstract render(): void;
 }
 
 class Circle extends Shape {
-    constructor(public radius:number, color:string) {
+    constructor(public radius: number, color: string) {
         super(color);
     }
     override render(): void {
-        console.log('Rendering a circle'); 
+        console.log('Rendering a circle');
     }
 }
 
-const circle = new Circle(1,"red");
+const circle = new Circle(1, "red");
 console.log('')
 
 circle.render();
+
+console.log('')
 
 console.log('End of section 15');
 // ============ 16 Interfaces ===========

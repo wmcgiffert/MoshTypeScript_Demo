@@ -171,7 +171,6 @@ class Shape {
     constructor(color) {
         this.color = color;
     }
-    render() { }
 }
 class Circle extends Shape {
     constructor(radius, color) {
@@ -185,5 +184,6 @@ class Circle extends Shape {
 const circle = new Circle(1, "red");
 console.log('');
 circle.render();
+console.log('');
 console.log('End of section 15');
 //# sourceMappingURL=ClassesIFacesOOP.js.map
