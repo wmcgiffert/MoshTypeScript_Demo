@@ -271,7 +271,41 @@ console.log('')
 
 console.log('End of section 15');
 // ============ 16 Interfaces ===========
+console.log('Start of section 16');
 
+// abstract class Calendar{
+//     constructor(public name: string){}
+
+//     abstract addEvent(): void;
+//     abstract removeEven(): void;
+// }
+console.log('Absrtact Cal was created');
+
+interface Calendar{
+    name: string;
+    addEvent(): void;
+    removeEvent(): void;
+}
+
+interface CloudCalendar extends Calendar{
+    sync(): void;    
+}
+
+class GoogleCalendar implements Calendar{
+    // name!: string; vscode alternate way of assignning a field 
+    constructor(public name: string){}
+    addEvent(): void {
+        throw new Error("Method not implemented.");
+    }
+    removeEvent(): void {
+        throw new Error("Method not implemented.");
+    }
+
+}
+console.log('')
+
+
+console.log('End of section 16');
 
 
 // ============ 17 Interfaces vs Types ===========

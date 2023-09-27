@@ -186,4 +186,12 @@ console.log('');
 circle.render();
 console.log('');
 console.log('End of section 15');
+console.log('Start of section 16');
+class Calendar {
+    constructor(name) {
+        this.name = name;
+    }
+}
+console.log('Absrtact Cal was created');
+console.log('End of section 16');
 //# sourceMappingURL=ClassesIFacesOOP.js.map
