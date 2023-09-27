@@ -187,11 +187,18 @@ circle.render();
 console.log('');
 console.log('End of section 15');
 console.log('Start of section 16');
-class Calendar {
+console.log('Absrtact Cal was created');
+class GoogleCalendar {
     constructor(name) {
         this.name = name;
     }
+    addEvent() {
+        throw new Error("Method not implemented.");
+    }
+    removeEvent() {
+        throw new Error("Method not implemented.");
+    }
 }
-console.log('Absrtact Cal was created');
+console.log('');
 console.log('End of section 16');
 //# sourceMappingURL=ClassesIFacesOOP.js.map
