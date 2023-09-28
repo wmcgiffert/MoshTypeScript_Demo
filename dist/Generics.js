@@ -11,5 +11,8 @@ let pair2 = new KeyValuePair('a', 'b');
 let pair3 = new KeyValuePair(3, 'c');
 let pairs = [pair1, pair2];
 pairs.push(pair3);
+pairs.forEach(pair => {
+    console.log(pair);
+});
 console.table(pairs);
 //# sourceMappingURL=Generics.js.map
