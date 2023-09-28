@@ -7,7 +7,7 @@ class KeyValuePair {
     ;
 }
 let pair1 = new KeyValuePair(1, 'a');
-let pair2 = new KeyValuePair('a', 'b');
+let pair2 = new KeyValuePair(2, 'b');
 let pair3 = new KeyValuePair(3, 'c');
 let pairs = [pair1, pair2];
 pairs.push(pair3);
