@@ -6,6 +6,10 @@ class KeyValuePair {
     }
     ;
 }
-let pairs = new KeyValuePair(1, 'a');
-console.log(pairs);
+let pair1 = new KeyValuePair(1, 'a');
+let pair2 = new KeyValuePair('a', 'b');
+let pair3 = new KeyValuePair(3, 'c');
+let pairs = [pair1, pair2];
+pairs.push(pair3);
+console.table(pairs);
 //# sourceMappingURL=Generics.js.map

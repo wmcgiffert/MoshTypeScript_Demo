@@ -3,9 +3,15 @@ class KeyValuePair<T> {
     constructor(public key: T, public value: string) { };
 }
 
-let pairs = new KeyValuePair<number>(1, 'a');
+let pair1 = new KeyValuePair<number>(1, 'a');
+let pair2 = new KeyValuePair<string>('a', 'b');
+let pair3 = new KeyValuePair<number>(3, 'c');
 
-console.log(pairs);
+let pairs = [pair1,  pair2]; 
+pairs.push(pair3); 
+
+
+console.table(pairs);
 
 // ============ 4 Generic Classes ===========
 // ============ 5 Generic Classes ===========
