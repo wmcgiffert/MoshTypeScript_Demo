@@ -14,4 +14,11 @@ let pairs = [pair1, pair2];
 pairs.push(pair3);
 pairs.push(pair4);
 console.table(pairs);
+class ArrayUtils {
+    static wrapInArray(input) {
+        return [input];
+    }
+}
+let number = ArrayUtils.wrapInArray(1);
+console.log(number);
 //# sourceMappingURL=Generics.js.map
