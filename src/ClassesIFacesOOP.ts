@@ -303,9 +303,5 @@ class GoogleCalendar implements Calendar{
 
 }
 console.log('')
-
-
 console.log('End of section 16');
-
-
 // ============ 17 Interfaces vs Types ===========
