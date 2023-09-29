@@ -15,9 +15,7 @@ pairs.push(pair4);
 // pairs.forEach(pair => {
 //     console.log(pair);
 // });
-
 console.table(pairs);
-
 // ============ 4 Generic Functions ===========
 
 
