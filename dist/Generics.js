@@ -31,11 +31,17 @@ function fetch(url) {
 let resultU = fetch({ username: 'gmac2790' });
 let resultP = fetch({ title: 'SWE .Net' });
 console.log('End of Section 5');
+class Person2 {
+    constructor(name) {
+        this.name = name;
+    }
+    ;
+}
+let value = new Person2('Mom');
 function echo(value) {
     console.log(value);
     return value;
 }
-let value = { name: 'Mom' };
 echo(value);
 console.log('End of Section 6');
 //# sourceMappingURL=Generics.js.map

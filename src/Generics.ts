@@ -63,11 +63,23 @@ console.log('End of Section 5');
 // doesnt work becuase bool is not included
 // echo(true);
 
-function echo<T extends { name: string }>(value: T): T {
+// function echo<T extends { name: string }>(value: T): T {
+//     console.log(value);
+//     return value;
+// }
+// let value = { name: 'Mom' }
+// echo(value);
+
+class Person2 {
+    constructor(public name: string) { };
+}
+
+let value = new Person2('Mom');
+
+function echo<T extends Person2>(value: T): T {
     console.log(value);
     return value;
 }
-let value = { name: 'Mom' }
 echo(value);
 
 console.log('End of Section 6');
