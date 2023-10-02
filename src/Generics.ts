@@ -15,6 +15,8 @@ pairs.push(pair4);
 //     console.log(pair);
 // });
 console.table(pairs);
+console.log('End of Section 3');
+
 // ============ 4 Generic Functions =========
 class ArrayUtils {
     static wrapInArray<T>(input: T): T[] {

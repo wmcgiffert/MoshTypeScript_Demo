@@ -14,6 +14,7 @@ let pairs = [pair1, pair2];
 pairs.push(pair3);
 pairs.push(pair4);
 console.table(pairs);
+console.log('End of Section 3');
 class ArrayUtils {
     static wrapInArray(input) {
         return [input];
@@ -21,6 +22,7 @@ class ArrayUtils {
 }
 let number = ArrayUtils.wrapInArray(1);
 console.log(number);
+console.log('End of Section 4');
 function fetch(url) {
     let base = url;
     console.log(base);
@@ -28,4 +30,5 @@ function fetch(url) {
 }
 let resultU = fetch({ username: 'gmac2790' });
 let resultP = fetch({ title: 'SWE .Net' });
+console.log('End of Section 5');
 //# sourceMappingURL=Generics.js.map
