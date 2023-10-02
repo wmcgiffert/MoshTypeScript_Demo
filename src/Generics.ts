@@ -80,6 +80,7 @@ class Customer2 extends Person2{
 
 let value = new Person2('Mom');
 let value2 = new Customer2('Mom2');
+
 function echo<T extends Person2>(value: T): T {
     console.log(value);
     return value;
