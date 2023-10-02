@@ -74,7 +74,7 @@ class Person2 {
     constructor(public name: string) { };
 }
 
-class Customer2 extends Person2{
+class Customer2 extends Person2 {
 
 }
 
@@ -86,12 +86,57 @@ function echo<T extends Person2>(value: T): T {
     return value;
 }
 echo(value);
-echo(value2); 
+echo(value2);
 console.log('End of Section 6');
 // ============ 7 Extending Generic Classes ===========
+interface Product2 {
+    name: string;
+    price: number;
+};
+class RawMaterials implements Product2 {
+    constructor(public name: string, public price: number, public state: string) { };
+};
 
+class Store<T extends Product2> {
+    items: T[] = [];
+
+    add(obj: T): void {
+        this.items.push(obj);
+    }
+    displayStore(): void {
+        // for (let index = 0; index < this.items.length; index++) {
+        //     const element = this.items[index];
+        //     console.log(element);
+        // }
+        this.items.forEach(item => {
+            console.log(item);
+        })
+    }
+    getStoreTotal(): void {
+        let total: number = 0.00;
+        this.items.forEach(item => {
+            let priceAmount: number = item.price;
+            total += priceAmount;
+        })
+        console.log(`The total value of your store is $${total.toFixed(2)}`);
+    }
+}
+
+let store = new Store<Product2>();
+store.add({ name: 'drone', price: 2999.89 });
+store.add({ name: 'drone 2', price: 2999.89 });
+store.add({ name: 'drone 3', price: 2999.89 });
+store.add({ name: 'drone 4', price: 2999.89 });
+let temp = new RawMaterials('drone 4',2999.89,'new');
+store.add(temp);
+store.displayStore();
+store.getStoreTotal();
+
+
+console.log('End of Section 7');
 
 // ============ 8 The keyof Operator ===========
+
 
 
 // ============ 9 Type Mapping ===========

@@ -48,4 +48,45 @@ function echo(value) {
 echo(value);
 echo(value2);
 console.log('End of Section 6');
+;
+class RawMaterials {
+    constructor(name, price, state) {
+        this.name = name;
+        this.price = price;
+        this.state = state;
+    }
+    ;
+}
+;
+class Store {
+    constructor() {
+        this.items = [];
+    }
+    add(obj) {
+        this.items.push(obj);
+    }
+    displayStore() {
+        this.items.forEach(item => {
+            console.log(item);
+        });
+    }
+    getStoreTotal() {
+        let total = 0.00;
+        this.items.forEach(item => {
+            let priceAmount = item.price;
+            total += priceAmount;
+        });
+        console.log(`The total value of your store is $${total.toFixed(2)}`);
+    }
+}
+let store = new Store();
+store.add({ name: 'drone', price: 2999.89 });
+store.add({ name: 'drone 2', price: 2999.89 });
+store.add({ name: 'drone 3', price: 2999.89 });
+store.add({ name: 'drone 4', price: 2999.89 });
+let temp = new RawMaterials('drone 4', 2999.89, 'new');
+store.add(temp);
+store.displayStore();
+store.getStoreTotal();
+console.log('End of Section 7');
 //# sourceMappingURL=Generics.js.map
