@@ -35,6 +35,7 @@ function echo(value) {
     console.log(value);
     return value;
 }
-echo('Hi Mom');
+let value = { name: 'Mom' };
+echo(value);
 console.log('End of Section 6');
 //# sourceMappingURL=Generics.js.map

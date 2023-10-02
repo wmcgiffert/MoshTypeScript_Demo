@@ -55,13 +55,24 @@ let resultP = fetch<Product>({ title: 'SWE .Net' });
 
 console.log('End of Section 5');
 // ============ 6 Generic Constraints ===========
-function echo<T extends number | string>(value: T): T {
+// function echo<T extends number | string>(value: T): T {
+//     console.log(value);
+//     return value;
+// }
+// echo('Hi Mom');
+// doesnt work becuase bool is not included
+// echo(true);
+
+function echo<T extends { name: string }>(value: T): T {
     console.log(value);
     return value;
 }
-echo('Hi Mom');
+let value = { name: 'Mom' }
+echo(value);
+
 console.log('End of Section 6');
 // ============ 7 Extending Generic Classes ===========
+
 
 // ============ 8 The keyof Operator ===========
 
