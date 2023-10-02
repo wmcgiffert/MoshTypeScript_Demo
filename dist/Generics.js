@@ -31,4 +31,10 @@ function fetch(url) {
 let resultU = fetch({ username: 'gmac2790' });
 let resultP = fetch({ title: 'SWE .Net' });
 console.log('End of Section 5');
+function echo(value) {
+    console.log(value);
+    return value;
+}
+echo('Hi Mom');
+console.log('End of Section 6');
 //# sourceMappingURL=Generics.js.map
