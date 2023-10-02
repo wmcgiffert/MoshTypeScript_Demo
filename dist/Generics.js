@@ -21,4 +21,11 @@ class ArrayUtils {
 }
 let number = ArrayUtils.wrapInArray(1);
 console.log(number);
+function fetch(url) {
+    let base = url;
+    console.log(base);
+    return { data: url, error: null };
+}
+let resultU = fetch({ username: 'gmac2790' });
+let resultP = fetch({ title: 'SWE .Net' });
 //# sourceMappingURL=Generics.js.map
