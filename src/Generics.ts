@@ -98,27 +98,44 @@ class RawMaterials implements Product2 {
 };
 
 class Store<T extends Product2> {
-    items: T[] = [];
+    protected _items: T[] = [];
 
     add(obj: T): void {
-        this.items.push(obj);
+        this._items.push(obj);
     }
     displayStore(): void {
-        // for (let index = 0; index < this.items.length; index++) {
-        //     const element = this.items[index];
+        // for (let index = 0; index < this._items.length; index++) {
+        //     const element = this._items[index];
         //     console.log(element);
         // }
-        this.items.forEach(item => {
+        this._items.forEach(item => {
             console.log(item);
         })
     }
     getStoreTotal(): void {
         let total: number = 0.00;
-        this.items.forEach(item => {
+        this._items.forEach(item => {
             let priceAmount: number = item.price;
             total += priceAmount;
         })
         console.log(`The total value of your store is $${total.toFixed(2)}`);
+    }
+}
+
+class CompressibleStore<T extends Product2> extends Store<T>{
+    compress() { };
+}
+
+class SearchableStore<T extends Product2 & { name: string }> extends Store<T>{
+    find(name: string): void {
+        let count: number = 0;
+        this._items.find(obj => {
+            if (obj.name.includes(name)) {
+                count++;
+                console.log(`Name: ${obj.name} Price:${obj.price}`);
+            }
+        })
+        console.log(`There are ${count} items named ${name}`);
     }
 }
 
@@ -127,10 +144,19 @@ store.add({ name: 'drone', price: 2999.89 });
 store.add({ name: 'drone 2', price: 2999.89 });
 store.add({ name: 'drone 3', price: 2999.89 });
 store.add({ name: 'drone 4', price: 2999.89 });
-let temp = new RawMaterials('drone 4',2999.89,'new');
+let temp = new RawMaterials('drone 4', 2999.89, 'new');
 store.add(temp);
 store.displayStore();
 store.getStoreTotal();
+
+let search = new SearchableStore();
+search.add({ name: 'drone', price: 2999.89 });
+search.add({ name: 'drone 2', price: 2999.89 });
+search.add({ name: 'drone 3', price: 2999.89 });
+search.add({ name: 'drone 4', price: 2999.89 });
+let temp2 = new RawMaterials('drone 4', 2999.89, 'new');
+search.add(temp2);
+search.find('drone');
 
 
 console.log('End of Section 7');

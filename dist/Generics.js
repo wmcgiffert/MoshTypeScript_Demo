@@ -60,23 +60,39 @@ class RawMaterials {
 ;
 class Store {
     constructor() {
-        this.items = [];
+        this._items = [];
     }
     add(obj) {
-        this.items.push(obj);
+        this._items.push(obj);
     }
     displayStore() {
-        this.items.forEach(item => {
+        this._items.forEach(item => {
             console.log(item);
         });
     }
     getStoreTotal() {
         let total = 0.00;
-        this.items.forEach(item => {
+        this._items.forEach(item => {
             let priceAmount = item.price;
             total += priceAmount;
         });
         console.log(`The total value of your store is $${total.toFixed(2)}`);
+    }
+}
+class CompressibleStore extends Store {
+    compress() { }
+    ;
+}
+class SearchableStore extends Store {
+    find(name) {
+        let count = 0;
+        this._items.find(obj => {
+            if (obj.name.includes(name)) {
+                count++;
+                console.log(`Name: ${obj.name} Price:${obj.price}`);
+            }
+        });
+        console.log(`There are ${count} items named ${name}`);
     }
 }
 let store = new Store();
@@ -88,5 +104,13 @@ let temp = new RawMaterials('drone 4', 2999.89, 'new');
 store.add(temp);
 store.displayStore();
 store.getStoreTotal();
+let search = new SearchableStore();
+search.add({ name: 'drone', price: 2999.89 });
+search.add({ name: 'drone 2', price: 2999.89 });
+search.add({ name: 'drone 3', price: 2999.89 });
+search.add({ name: 'drone 4', price: 2999.89 });
+let temp2 = new RawMaterials('drone 4', 2999.89, 'new');
+search.add(temp2);
+search.find('drone');
 console.log('End of Section 7');
 //# sourceMappingURL=Generics.js.map
