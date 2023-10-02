@@ -23,12 +23,12 @@ class ArrayUtils{
 }
 let number = ArrayUtils.wrapInArray(1);
 console.log(number);
-// ============ 5 Generic Classes ===========
+// ============ 5 Generic Interfaces ===========
 
-// ============ 6 Generic Classes ===========
+// ============ 6 Generic Constraints ===========
 
-// ============ 7 Generic Classes ===========
+// ============ 7 Extending Generic Classes ===========
 
-// ============ 8 Generic Classes ===========
+// ============ 8 The keyof Operator ===========
 
-// ============ 9 Generic Classes ===========
+// ============ 9 Type Mapping ===========
