@@ -23,6 +23,9 @@ class ArrayUtils {
 }
 let number = ArrayUtils.wrapInArray(1);
 console.log(number);
+console.log('End of Section 4');
+
+
 // ============ 5 Generic Interfaces ===========
 // http://mywebsitee.com/users
 // http://mywebsitee.com/products
@@ -48,7 +51,7 @@ interface Product {
 let resultU = fetch<User>({ username: 'gmac2790' });
 let resultP = fetch<Product>({ title: 'SWE .Net' });
 
-
+console.log('End of Section 5');
 // ============ 6 Generic Constraints ===========
 
 // ============ 7 Extending Generic Classes ===========
