@@ -37,11 +37,15 @@ class Person2 {
     }
     ;
 }
+class Customer2 extends Person2 {
+}
 let value = new Person2('Mom');
+let value2 = new Customer2('Mom2');
 function echo(value) {
     console.log(value);
     return value;
 }
 echo(value);
+echo(value2);
 console.log('End of Section 6');
 //# sourceMappingURL=Generics.js.map
