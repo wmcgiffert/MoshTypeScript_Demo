@@ -37,8 +37,7 @@ interface Result<T> {
     error: string | null
 }
 function fetch<T>(url: T): Result<T> {
-    let base = url;
-    console.log(base);
+    console.log(url);
     return { data: url, error: null };
 }
 
@@ -52,6 +51,8 @@ interface Product {
 
 let resultU = fetch<User>({ username: 'gmac2790' });
 let resultP = fetch<Product>({ title: 'SWE .Net' });
+
+console.log(`User:  ${JSON.stringify(resultU)}  Product: ${JSON.stringify(resultP)}`);
 
 console.log('End of Section 5');
 // ============ 6 Generic Constraints ===========

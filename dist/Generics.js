@@ -24,12 +24,12 @@ let number = ArrayUtils.wrapInArray(1);
 console.log(number);
 console.log('End of Section 4');
 function fetch(url) {
-    let base = url;
-    console.log(base);
+    console.log(url);
     return { data: url, error: null };
 }
 let resultU = fetch({ username: 'gmac2790' });
 let resultP = fetch({ title: 'SWE .Net' });
+console.log(`User:  ${JSON.stringify(resultU)}  Product: ${JSON.stringify(resultP)}`);
 console.log('End of Section 5');
 class Person2 {
     constructor(name) {
