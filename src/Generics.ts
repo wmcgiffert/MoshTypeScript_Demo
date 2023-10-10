@@ -163,7 +163,21 @@ search.find('drone');
 console.log('End of Section 7');
 
 // ============ 8 The keyof Operator ===========
+interface Product3 {
+    name: string;
+    price: number;
+};
 
+class Store2<T>{
+    protected _items: T[] = [];
+
+    add(obj: T): void {
+        this._items.push(obj);
+    }   
+    find (property: string , values: unknown): T | undefined{
+        return this._items.find(obj => obj[property] === values);
+    }
+}
 
 
 // ============ 9 Type Mapping ===========
