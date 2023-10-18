@@ -214,6 +214,9 @@ let pPerson : ReadOnlyTemplate<Person2>= {
 console.log(pProduct);
 console.log(pPerson);
 
+// Utility Types at the URL below
+// https://www.typescriptlang.org/docs/handbook/utility-types.html
 // pProduct.name = 'Car';
 // pProduct.price = 100.00;
+
 console.log('End of Section 9');
