@@ -147,7 +147,7 @@ console.log('1: Convert the function below to a generic function:functionecho(ar
 function echo1(arg) { return arg; }
 console.log('function echo1<T>(arg:T): T{return arg;}');
 console.log('2: When compiling the following piece of code, we get an error saying Property name does not exist on type T. How can we solve this problem? An Entity should have a unique identifier. The type of identifier, however, is dependent on the use case. In some cases, the ID might be a number, in other cases, it might be a string, GUID, etc. Represent the entity using a generic class.  interfaceUser { userId:number; username:string;}•Given the following interface, what does keyof User return');
-console.log('extend the funciton with an interface');
+console.log('extend the funciton with an interface/declaration = functionprintName<T extends { name:string }>(obj:T) {console.log(obj.name);}');
 console.log('3: An Entity should have a unique identifier. The type of identifier, however, is dependent on the use case. In some cases, the ID might be a number, in other cases, it might be a string, GUID, etc. Represent the entity using a generic class.');
 console.log('Class Entity<T>{ consturctor(public id:T) {} }');
 console.log('4: Given the following interface, what does keyof User return?');
