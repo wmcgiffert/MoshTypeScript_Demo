@@ -140,4 +140,7 @@ let pProduct = {
 let pPerson = {
     name: 'Garrett',
 };
+console.log(pProduct);
+console.log(pPerson);
+console.log('End of Section 9');
 //# sourceMappingURL=Generics.js.map
