@@ -202,14 +202,17 @@ type ReadOnlyTemplate<T> = {
     readonly [Property in keyof T]: T[Property];
 }
 
-let pProduct : Readonly<Product4>= {
+let pProduct : ReadOnlyTemplate<Product4>= {
     name: 'Drone',
     price: 25.99
 };
 
-let pPerson : Readonly<Person2>= {
+let pPerson : ReadOnlyTemplate<Person2>= {
     name: 'Garrett',
 }
+
+console.log(pProduct);
+console.log(pPerson);
 
 // pProduct.name = 'Car';
 // pProduct.price = 100.00;
