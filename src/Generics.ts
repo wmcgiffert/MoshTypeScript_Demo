@@ -216,3 +216,4 @@ console.log(pPerson);
 
 // pProduct.name = 'Car';
 // pProduct.price = 100.00;
+console.log('End of Section 9');
