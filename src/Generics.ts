@@ -174,10 +174,19 @@ class Store2<T>{
     add(obj: T): void {
         this._items.push(obj);
     }   
-    find (property: string , values: unknown): T | undefined{
+    find (property: keyof T, values: unknown): T | undefined{
         return this._items.find(obj => obj[property] === values);
     }
 }
 
+let store2 = new Store2<Product3>();
+store2.add({ name: 'drone', price: 2999.89 });
+let pName = store2.find('name', 'drone');
+let pPrice = store2.find('price', 2999.89);
+
+console.log(pName);
+console.log(pPrice);
+
+console.log('End of Section 8');
 
 // ============ 9 Type Mapping ===========

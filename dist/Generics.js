@@ -113,4 +113,23 @@ let temp2 = new RawMaterials('drone 4', 2999.89, 'new');
 search.add(temp2);
 search.find('drone');
 console.log('End of Section 7');
+;
+class Store2 {
+    constructor() {
+        this._items = [];
+    }
+    add(obj) {
+        this._items.push(obj);
+    }
+    find(property, values) {
+        return this._items.find(obj => obj[property] === values);
+    }
+}
+let store2 = new Store2();
+store2.add({ name: 'drone', price: 2999.89 });
+let pName = store2.find('name', 'drone');
+let pPrice = store2.find('price', 2999.89);
+console.log(pName);
+console.log(pPrice);
+console.log('End of Section 8');
 //# sourceMappingURL=Generics.js.map
