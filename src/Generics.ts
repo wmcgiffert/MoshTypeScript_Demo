@@ -190,3 +190,26 @@ console.log(pPrice);
 console.log('End of Section 8');
 
 // ============ 9 Type Mapping ===========
+
+interface Product4 {
+    name: string;
+    price: number;
+};
+
+type ReadOnlyTemplate<T> = {
+    // Index signature
+    // keyof
+    readonly [Property in keyof T]: T[Property];
+}
+
+let pProduct : Readonly<Product4>= {
+    name: 'Drone',
+    price: 25.99
+};
+
+let pPerson : Readonly<Person2>= {
+    name: 'Garrett',
+}
+
+// pProduct.name = 'Car';
+// pProduct.price = 100.00;

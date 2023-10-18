@@ -132,4 +132,12 @@ let pPrice = store2.find('price', 2999.89);
 console.log(pName);
 console.log(pPrice);
 console.log('End of Section 8');
+;
+let pProduct = {
+    name: 'Drone',
+    price: 25.99
+};
+let pPerson = {
+    name: 'Garrett',
+};
 //# sourceMappingURL=Generics.js.map
