@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import ReminderList from './components/ReminderList';
 import Reminder from './models/Reminder';
@@ -18,6 +19,9 @@ const reminders: Reminder[] = [
 ]
 
 function App() {
+  const [reminders, setRemidners] = useState<Reminder[]>([]);
+
+  
   return (
     <div className="App">
       <ReminderList items={reminders} />
