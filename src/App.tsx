@@ -1,7 +1,8 @@
 import './App.css';
 import ReminderList from './components/ReminderList';
+import Reminder from './models/Reminder';
 
-let list = [
+const reminders: Reminder[] = [
   {
     id: 1,
     title: 'Follow up with Price'
@@ -19,7 +20,7 @@ let list = [
 function App() {
   return (
     <div className="App">
-      <ReminderList items={list} />
+      <ReminderList items={reminders} />
     </div>
   );
 }
