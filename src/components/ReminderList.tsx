@@ -2,7 +2,6 @@ import React from 'react';
 import Reminder from '../models/Reminder';
 
 
-
 interface ReminderListProps {
     items: Reminder[];
     onRemoveReminder: (id: number) => void;
