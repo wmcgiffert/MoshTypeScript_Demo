@@ -5,9 +5,10 @@ import Reminder from '../models/Reminder';
 
 interface ReminderListProps {
     items: Reminder[];
+    onRemoveReminder: (id: number) => void;
 }
 
-function ReminderList({ items }: ReminderListProps) {
+function ReminderList({ items, onRemoveReminder }: ReminderListProps) {
     return (
         <ul className='list-group'>
             {items.map(item =>
@@ -16,7 +17,10 @@ function ReminderList({ items }: ReminderListProps) {
                         {item.title}
                     </span>
                     <span>
-                        <button className="btn btn-danger">Delete</button>
+                        <button
+                            className="btn btn-danger rounded-pill"
+                            onClick={() => onRemoveReminder(item.id)}
+                        >Delete</button>
                     </span>
                 </li>)}
         </ul>
