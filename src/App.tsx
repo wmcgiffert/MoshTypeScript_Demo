@@ -13,7 +13,6 @@ function App() {
 
   useEffect(() => { loadReminders(); }, [])
 
-
   const loadReminders = async () => {
     const data = RemindersService.getReminders();
     setRemidners(await data);
